@@ -1,0 +1,21 @@
+name: Extras
+version: '${project.version}'
+main: dev.jordgubbe.extras.Main
+api-version: '1.20'
+commands:
+  enchant:
+    description: Enchants the item in your hand
+    usage: /enchant <enchantment> <level>
+    aliases: [ench]
+  give:
+    description: Gives a player an item
+    usage: /give <player> <item> <amount>
+    aliases: [material, mat, item]
+  vanish:
+    description: Makes you invisible to other players
+    usage: /vanish
+    aliases: [v]
+  coordinates:
+    description: Shows your coordinates
+    usage: /coordinates
+    aliases: [coords, coord, cords, cord]
