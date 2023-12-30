@@ -1,5 +1,5 @@
 name: Extras
-version: '0.1'
+version: '0.1.2'
 main: dev.jordgubbe.extras.Main
 api-version: '1.20'
 commands:

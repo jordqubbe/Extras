@@ -15,7 +15,7 @@ public abstract class Files {
     File file;
     FileConfiguration config;
 
-    public Files(String pluginName, String fileName) {
+    public void setPluginAndFile(String pluginName, String fileName) {
         this.pluginName = pluginName;
         this.fileName = fileName;
     }
