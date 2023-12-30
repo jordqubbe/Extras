@@ -1,19 +1,14 @@
 package dev.jordgubbe.extras.library;
 
+import dev.jordgubbe.extras.utils.SkullCreator;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
-import org.bukkit.attribute.Attribute;
-import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.EquipmentSlot;
-import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.List;
-import java.util.UUID;
 
 public class Item {
 
@@ -39,7 +34,7 @@ public class Item {
      * Creates a Skull ItemStack that can get a texture from minecraft-heads.com
      * @param name - name of the skull item
      * @param lore - lore (if any) of said skull item
-     * @param url - Provide a URL in the form of a Mojang texture : http://textures.minecraft.net/texture/[whatever the value is]
+     * @param url - Provide a URL in the form of a Mojang texture : http://textures.minecraft.net/texture/*whatever the value is*
      * @return - The newly created Skull ItemStack
      */
     public static ItemStack createSkull(String name, List<String> lore, String url) {
@@ -89,48 +84,6 @@ public class Item {
         ShapedRecipe recipe = new ShapedRecipe(NamespacedKey.minecraft(key), item);
         recipe.shape(top, middle, bottom);
         return recipe;
-    }
-
-    /**
-     * Adds an enchantment to the given item
-     * @param item - The item you want to add an enchantment
-     * @param enchantment - The enchantment you want to add
-     * @param enchantLevel - The level of the enchantment you want to add
-     */
-    public static void addEnchant(ItemStack item, Enchantment enchantment, int enchantLevel) {
-        ItemMeta meta = item.getItemMeta();
-        assert meta != null;
-        meta.addEnchant(enchantment, enchantLevel, true);
-        item.setItemMeta(meta);
-    }
-
-    /**
-     * Adds item flags to the given item
-     * @param item - Item you want to add flags too
-     * @param flag - ItemFlag you want to add
-     */
-    public static void addItemFlags(ItemStack item, ItemFlag flag) {
-        ItemMeta meta = item.getItemMeta();
-        assert meta != null;
-        meta.addItemFlags(flag);
-        item.setItemMeta(meta);
-    }
-
-    /**
-     * Adds an attribute modifier to the given item
-     * @param item - Item that is getting the modifier
-     * @param attribute - Given
-     * @param key - Namespaced key for the item's attribute
-     * @param level - The value of the bonus on the modifier
-     * @param operation - Scale or add
-     * @param slot - Which slot gives the bonus
-     */
-    public static void addAttributeModifier(ItemStack item, Attribute attribute, String key, int level, AttributeModifier.Operation operation, EquipmentSlot slot) {
-        AttributeModifier modifier = new AttributeModifier(UUID.randomUUID(), key, level, operation, slot);
-        ItemMeta meta = item.getItemMeta();
-        assert meta != null;
-        meta.addAttributeModifier(attribute, modifier);
-        item.setItemMeta(meta);
     }
 
 }

@@ -1,4 +1,4 @@
-package dev.jordgubbe.extras.library;
+package dev.jordgubbe.extras.utils;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;

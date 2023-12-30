@@ -19,3 +19,7 @@ commands:
     description: Shows your coordinates
     usage: /coordinates
     aliases: [coords, coord, cords, cord]
+  hologram:
+    description: Spawns a hologram with the desired name. You must use _ to indicate spaces
+    usage: /hologram <name>
+    aliases: [holo] [holog]

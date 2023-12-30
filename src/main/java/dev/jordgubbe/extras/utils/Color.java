@@ -9,6 +9,36 @@ import java.util.regex.Pattern;
 
 public class Color {
 
+    /**
+     *
+     * I DO NOT OWN THIS.
+     * IT IS TAKEN (AND EDITED) FROM KODY SIMPSONS SIMP-API
+     * https://github.com/Cortex-MC/SimpAPI
+     * <p>
+     * &0 = Black
+     * &1 = Dark Blue
+     * &2 = Dark Green
+     * &3 = Dark Aqua
+     * &4 = Dark Red
+     * &5 = Dark Purple
+     * &6 = Gold
+     * &7 = Gray
+     * &8 = Dark Gray
+     * &9 = Blue
+     * &a = Green
+     * &b = Aqua
+     * &c = Red
+     * &d = Light Purple
+     * &e = Yellow
+     * &f = White
+     * &k = Obfuscated
+     * &l = Bold
+     * &m = Strikethrough
+     * &n = Underline
+     * &o = Italic
+     * &r = Reset
+     */
+
     @Deprecated
     public static final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))";
     private static final Pattern HEX_PATTERN = Pattern.compile("(&#[0-9a-fA-F]{6})");
