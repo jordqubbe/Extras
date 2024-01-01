@@ -16,7 +16,7 @@ Hello! This is just a little something I'm trying to make (as I'm learning to co
 
 If you want to use this, you can import it by using what's below!
 
-Please feel free to give me feed if you see something that could be done better, or if you have suggestions! My discord username is **jordqubbe**!
+Please feel free to give me feedback if you see something that could be done better, or if you have suggestions! My discord username is **jordqubbe**!
 
 ## Installation
 ****
