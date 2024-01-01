@@ -1,5 +1,6 @@
 package dev.jordgubbe.extras.library;
 
+import dev.jordgubbe.extras.utils.Color;
 import dev.jordgubbe.extras.utils.SkullCreator;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -8,6 +9,7 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Item {
@@ -24,7 +26,7 @@ public class Item {
         ItemStack item = new ItemStack(mat, amount);
         ItemMeta meta = item.getItemMeta();
         assert meta != null;
-        meta.setDisplayName(name);
+        meta.setDisplayName(Color.format(name));
         meta.setLore(lore);
         item.setItemMeta(meta);
         return item;
@@ -32,19 +34,20 @@ public class Item {
 
     /**
      * Creates a Skull ItemStack that can get a texture from minecraft-heads.com
-     * @param name - name of the skull item
-     * @param lore - lore (if any) of said skull item
-     * @param url - Provide a URL in the form of a Mojang texture : http://textures.minecraft.net/texture/*whatever the value is*
-     * @return - The newly created Skull ItemStack
+     * @param name Name of the skull item
+     * @param lore lore (if any) of said skull item
+     * @param url Provide a URL in the form of a Mojang texture
+     * @return The newly created Skull ItemStack
      */
     public static ItemStack createSkull(String name, List<String> lore, String url) {
+        String prefix = "http://textures.minecraft.net/texture/";
         ItemStack item = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta meta = (SkullMeta) item.getItemMeta();
         assert meta != null;
-        meta.setDisplayName(name);
+        meta.setDisplayName(Color.format(name));
         meta.setLore(lore);
         item.setItemMeta(meta);
-        return SkullCreator.itemWithUrl(item, url);
+        return SkullCreator.itemWithUrl(item, prefix + url);
     }
 
     /**

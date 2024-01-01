@@ -46,11 +46,11 @@ The latest version can be seen here: [![](https://jitpack.io/v/jordqubbe/Extras.
 ****
 I have forked some code written by Kody Simpson that allows for quicker color code translation. 
 
-This can be used with not only hexidecimal codes, but also all of the standard minecraft color codes.
+This can be used with not only hexidecimal codes, but also all the standard minecraft color codes.
 
 Example:
 ```java
-Color.translate("&c&lThis is some fancy Red & Bold text!")
+Color.translate("&c&lThis is some fancy Red & Bold text!");
 ```
 
 ### Skull Creator
@@ -86,9 +86,9 @@ public void createSkull() {
 
 ### Item Library - Modifier Library
 ****
-I have also wrote out some methods that make things slightly easier. It speeds up the process of making items with names and lore, along with adding Attribute Modifiers, enchantments and things like that.
+I have also written out some methods that make things slightly easier. It speeds up the process of making items with names and lore, along with adding Attribute Modifiers, enchantments and things like that.
 
-This is all really for the simplicity of not crowding space when making an item. Instead of having to add everything seprately with ItemMeta, it's just one line of code now.
+This is all really for the simplicity of not crowding space when making an item. Instead of having to add everything separately with ItemMeta, it's just one line of code now.
 ```java
 // For making new items, but refer to above for making Skulls
 public static ItemStack createItem(String name, Material mat, int amount, List<String> lore) {
@@ -97,8 +97,8 @@ public static ItemStack createItem(String name, Material mat, int amount, List<S
     assert meta != null;
     meta.setDisplayName(Color.format(name));
     meta.setLore(lore);
-   item.setItemMeta(meta);
-   return item;
+    item.setItemMeta(meta);
+    return item;
 }
 
 // For adding enchants to an item faster
