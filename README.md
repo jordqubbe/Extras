@@ -16,6 +16,8 @@ Hello! This is just a little something I'm trying to make (as I'm learning to co
 
 If you want to use this, you can import it by using what's below!
 
+Please feel free to give me feed if you see something that could be done better, or if you have suggestions! My discord username is **jordqubbe**!
+
 ## Installation
 ****
 I will just be adding Maven to the Github repo, but the rest can be found here: https://jitpack.io/#jordqubbe/Extras
