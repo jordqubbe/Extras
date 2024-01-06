@@ -3,10 +3,10 @@ dev\jordgubbe\extras\utils\SkullCreator.class
 dev\jordgubbe\extras\utils\StringUtils.class
 dev\jordgubbe\extras\commands\Give.class
 dev\jordgubbe\extras\commands\Reload$1.class
+dev\jordgubbe\extras\files\FileUtils.class
 dev\jordgubbe\extras\commands\Coordinates.class
 dev\jordgubbe\extras\library\Modifiers.class
 dev\jordgubbe\extras\utils\ConsoleUtils.class
-dev\jordgubbe\extras\utils\FileUtils.class
 dev\jordgubbe\extras\holograms\Spawn.class
 dev\jordgubbe\extras\commands\Vanish.class
 dev\jordgubbe\extras\commands\Enchant.class

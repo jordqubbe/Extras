@@ -22,7 +22,7 @@ commands:
   hologram:
     description: Spawns a hologram with the desired name. You must use _ to indicate spaces
     usage: /hologram <name>
-    aliases: [holo] [holog]
+    aliases: [holo, holog]
   reload:
     description: Reloads the server.
     usage: /reload <time>

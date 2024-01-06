@@ -1,5 +1,6 @@
-package dev.jordgubbe.extras.utils;
+package dev.jordgubbe.extras.files;
 
+import dev.jordgubbe.extras.utils.ConsoleUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -15,10 +16,13 @@ public class FileUtils {
     File file;
     FileConfiguration config;
 
-    public void initialize(String pluginName, String fileName) {
+    public void setFileAndPluginName(String pluginName, String fileName) {
         this.pluginName = pluginName;
         this.fileName = fileName;
-        file = new java.io.File(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin(pluginName)).getDataFolder(), fileName);
+    }
+
+    public void initialize() {
+        file = new File(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin(pluginName)).getDataFolder(), fileName);
         if (!file.exists()) {
             try {
                 file.createNewFile();
@@ -46,7 +50,7 @@ public class FileUtils {
 
     public void reload() {
         if (config == null) {
-            this.initialize(pluginName, fileName);
+            this.initialize();
         }
         config = YamlConfiguration.loadConfiguration(file);
     }

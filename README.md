@@ -22,7 +22,6 @@ Please feel free to give me feedback if you see something that could be done bet
 ****
 I will just be adding Maven to the Github repo, but the rest can be found here: https://jitpack.io/#jordqubbe/Extras
 
-The latest version can be seen here: [![](https://jitpack.io/v/jordqubbe/Extras.svg)](https://jitpack.io/#jordqubbe/Extras)
 #### Repository
 ```xml
 <repository>
