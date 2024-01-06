@@ -1,18 +1,19 @@
 package dev.jordgubbe.extras.commands;
 
-import dev.jordgubbe.extras.utils.Color;
-import dev.jordgubbe.extras.utils.Console;
+import dev.jordgubbe.extras.utils.ColorUtils;
+import dev.jordgubbe.extras.utils.ConsoleUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 public class Coordinates implements CommandExecutor {
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String s, String[] args) {
         if (!(sender instanceof Player player)) {
-            sender.sendMessage(Color.format(Console.NOT_A_PLAYER.print()));
+            sender.sendMessage(ColorUtils.format(ConsoleUtils.NOT_A_PLAYER.print()));
             return true;
         } else {
             if (cmd.getName().equalsIgnoreCase("coordinates")) {

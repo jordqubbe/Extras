@@ -7,7 +7,7 @@
 
   <groupId>dev.jordgubbe</groupId>
   <artifactId>Extras</artifactId>
-  <version>0.1.2</version>
+  <version>0.1.3</version>
   <packaging>jar</packaging>
 
   <name>Extras</name>
@@ -38,6 +38,9 @@
             <goals>
               <goal>shade</goal>
             </goals>
+              <configuration>
+                  <outputFile>C:\Users\killi\OneDrive\Desktop\PluginsExport\Extras.jar</outputFile>
+              </configuration>
           </execution>
         </executions>
       </plugin>
@@ -56,12 +59,12 @@
           <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
       </repository>
       <repository>
-          <id>sonatype</id>
-          <url>https://oss.sonatype.org/content/groups/public/</url>
-      </repository>
-      <repository>
           <id>minecraft-repo</id>
           <url>https://libraries.minecraft.net/</url>
+      </repository>
+      <repository>
+          <id>papermc-repo</id>
+          <url>https://repo.papermc.io/repository/maven-public/</url>
       </repository>
   </repositories>
 
@@ -69,6 +72,12 @@
       <dependency>
           <groupId>org.spigotmc</groupId>
           <artifactId>spigot-api</artifactId>
+          <version>1.20.4-R0.1-SNAPSHOT</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>io.papermc.paper</groupId>
+          <artifactId>paper-api</artifactId>
           <version>1.20.4-R0.1-SNAPSHOT</version>
           <scope>provided</scope>
       </dependency>

@@ -50,7 +50,7 @@ This can be used with not only hexidecimal codes, but also all the standard mine
 
 Example:
 ```java
-Color.translate("&c&lThis is some fancy Red & Bold text!");
+ColorUtils.translate("&c&lThis is some fancy Red & Bold text!");
 ```
 
 ### Skull Creator

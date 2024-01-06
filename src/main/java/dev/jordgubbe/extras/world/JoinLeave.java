@@ -1,7 +1,7 @@
-package dev.jordgubbe.extras.logistics;
+package dev.jordgubbe.extras.world;
 
 import dev.jordgubbe.extras.Main;
-import dev.jordgubbe.extras.utils.Color;
+import dev.jordgubbe.extras.utils.ColorUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -19,13 +19,13 @@ public class JoinLeave implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        event.setJoinMessage(Color.format("&a" + player.getName() + " &ejoined the server!"));
+        event.setJoinMessage(ColorUtils.format("&a" + player.getName() + " &ejoined the server!"));
     }
 
     @EventHandler
     public void onPlayerLeave(PlayerQuitEvent event) {
         Player player = event.getPlayer();
-        event.setQuitMessage(Color.format("&a" + player.getName() + " &eleft the server!"));
+        event.setQuitMessage(ColorUtils.format("&a" + player.getName() + " &eleft the server!"));
     }
 
 }

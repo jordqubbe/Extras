@@ -1,13 +1,12 @@
 package dev.jordgubbe.extras;
 
-import dev.jordgubbe.extras.commands.Coordinates;
-import dev.jordgubbe.extras.commands.Enchant;
-import dev.jordgubbe.extras.commands.Give;
-import dev.jordgubbe.extras.commands.Vanish;
+import dev.jordgubbe.extras.commands.*;
 import dev.jordgubbe.extras.holograms.Spawn;
-import dev.jordgubbe.extras.logistics.Chat;
-import dev.jordgubbe.extras.logistics.JoinLeave;
-import dev.jordgubbe.extras.utils.Console;
+import dev.jordgubbe.extras.world.Chat;
+import dev.jordgubbe.extras.world.JoinLeave;
+import dev.jordgubbe.extras.utils.ConsoleUtils;
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -26,6 +25,7 @@ public final class Main extends JavaPlugin {
         Objects.requireNonNull(getCommand("vanish")).setExecutor(new Vanish(this));
         Objects.requireNonNull(getCommand("coordinates")).setExecutor(new Coordinates());
         Objects.requireNonNull(getCommand("hologram")).setExecutor(new Spawn());
+        Objects.requireNonNull(getCommand("reload")).setExecutor(new Reload(this));
     }
 
     private void registerEvents() {
@@ -36,7 +36,7 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Console.sendToConsole("&a[Extras] Plugin has been enabled.");
+        ConsoleUtils.sendToConsole("&a[Extras] Plugin has been enabled.");
         configMethods();
         registerCommands();
         registerEvents();
@@ -44,6 +44,6 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        Console.sendToConsole("&c[Extras] Plugin has been disabled.");
+        ConsoleUtils.sendToConsole("&c[Extras] Plugin has been disabled.");
     }
 }

@@ -1,7 +1,7 @@
 package dev.jordgubbe.extras.commands;
 
-import dev.jordgubbe.extras.utils.Color;
-import dev.jordgubbe.extras.utils.Console;
+import dev.jordgubbe.extras.utils.ColorUtils;
+import dev.jordgubbe.extras.utils.ConsoleUtils;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -14,7 +14,7 @@ public class Give implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player player)) {
-            sender.sendMessage(Color.format(Console.NOT_A_PLAYER.print()));
+            sender.sendMessage(ColorUtils.format(ConsoleUtils.NOT_A_PLAYER.print()));
             return true;
         } else {
             if (player.isOp()) {
@@ -27,19 +27,19 @@ public class Give implements CommandExecutor {
                                 player.getInventory().addItem(new ItemStack(material));
                             }
                             if (amount == 1) {
-                                player.sendMessage(Color.format("&eAdded: &a" + amount + " " + args[0].toUpperCase().replace("_", " ")));
+                                player.sendMessage(ColorUtils.format("&eAdded: &a" + amount + " " + args[0].toUpperCase().replace("_", " ")));
                             } else {
-                                player.sendMessage(Color.format("&eAdded: &a" + amount + " " + args[0].toUpperCase().replace("_", " ") + "S"));
+                                player.sendMessage(ColorUtils.format("&eAdded: &a" + amount + " " + args[0].toUpperCase().replace("_", " ") + "S"));
                             }
                         } catch (IllegalArgumentException exception) {
-                            player.sendMessage(Color.format("&cThat is not a valid material!"));
+                            player.sendMessage(ColorUtils.format("&cThat is not a valid material!"));
                         }
                     } else {
-                        player.sendMessage(Color.format("&c/material|item [material type] [amount]"));
+                        player.sendMessage(ColorUtils.format("&c/material|item [material type] [amount]"));
                     }
                 }
             } else {
-                player.sendMessage(Color.format(Console.NO_PERMISSION.print()));
+                player.sendMessage(ColorUtils.format(ConsoleUtils.NO_PERMISSION.print()));
             }
         }
         return true;

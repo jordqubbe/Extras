@@ -1,7 +1,7 @@
 package dev.jordgubbe.extras.holograms;
 
-import dev.jordgubbe.extras.utils.Color;
-import dev.jordgubbe.extras.utils.Console;
+import dev.jordgubbe.extras.utils.ColorUtils;
+import dev.jordgubbe.extras.utils.ConsoleUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,7 +15,7 @@ public class Spawn implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(Color.format(Console.NOT_A_PLAYER.print()));
+            sender.sendMessage(ColorUtils.format(ConsoleUtils.NOT_A_PLAYER.print()));
             return true;
         } else {
             Player player = (Player) sender;
@@ -28,7 +28,7 @@ public class Spawn implements CommandExecutor {
                         hologram.setCustomNameVisible(true);
                         hologram.setGravity(false);
                         hologram.setInvulnerable(true);
-                        hologram.setCustomName(Color.format(args[0].replace("_", " ")));
+                        hologram.setCustomName(ColorUtils.format(args[0].replace("_", " ")));
 
                         player.sendMessage(ChatColor.YELLOW + "Summoned new Armor Stand Hologram");
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&eName: &r" + args[3].replace("_", " ")));
@@ -37,7 +37,7 @@ public class Spawn implements CommandExecutor {
                     }
                 }
             } else {
-                player.sendMessage(Color.format(Console.NO_PERMISSION.print()));
+                player.sendMessage(ColorUtils.format(ConsoleUtils.NO_PERMISSION.print()));
             }
         }
         return true;

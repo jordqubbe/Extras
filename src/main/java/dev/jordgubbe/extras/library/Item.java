@@ -1,6 +1,6 @@
 package dev.jordgubbe.extras.library;
 
-import dev.jordgubbe.extras.utils.Color;
+import dev.jordgubbe.extras.utils.ColorUtils;
 import dev.jordgubbe.extras.utils.SkullCreator;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -9,7 +9,6 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Item {
@@ -26,7 +25,7 @@ public class Item {
         ItemStack item = new ItemStack(mat, amount);
         ItemMeta meta = item.getItemMeta();
         assert meta != null;
-        meta.setDisplayName(Color.format(name));
+        meta.setDisplayName(ColorUtils.format(name));
         meta.setLore(lore);
         item.setItemMeta(meta);
         return item;
@@ -44,7 +43,7 @@ public class Item {
         ItemStack item = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta meta = (SkullMeta) item.getItemMeta();
         assert meta != null;
-        meta.setDisplayName(Color.format(name));
+        meta.setDisplayName(ColorUtils.format(name));
         meta.setLore(lore);
         item.setItemMeta(meta);
         return SkullCreator.itemWithUrl(item, prefix + url);

@@ -1,5 +1,5 @@
 name: Extras
-version: '0.1.2'
+version: '0.1.3'
 main: dev.jordgubbe.extras.Main
 api-version: '1.20'
 commands:
@@ -23,3 +23,7 @@ commands:
     description: Spawns a hologram with the desired name. You must use _ to indicate spaces
     usage: /hologram <name>
     aliases: [holo] [holog]
+  reload:
+    description: Reloads the server.
+    usage: /reload <time>
+    aliases: [reloadserver]

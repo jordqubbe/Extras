@@ -7,7 +7,7 @@ import net.md_5.bungee.api.chat.TextComponent;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Color {
+public class ColorUtils {
 
     /**
      *
@@ -66,7 +66,7 @@ public class Color {
     }
 
     public static String format(String string) {
-        return Color.translate(string);
+        return ColorUtils.translate(string);
     }
 
     public static String stripColor(String string) {

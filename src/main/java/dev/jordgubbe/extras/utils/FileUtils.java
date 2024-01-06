@@ -8,25 +8,22 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
-public abstract class Files {
+public class FileUtils {
 
     String pluginName;
     String fileName;
     File file;
     FileConfiguration config;
 
-    public void setPluginAndFile(String pluginName, String fileName) {
+    public void initialize(String pluginName, String fileName) {
         this.pluginName = pluginName;
         this.fileName = fileName;
-    }
-
-    public void initialize() {
         file = new java.io.File(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin(pluginName)).getDataFolder(), fileName);
         if (!file.exists()) {
             try {
                 file.createNewFile();
             } catch (IOException e) {
-                Bukkit.getServer().getConsoleSender().sendMessage(Console.CONFIGURATION_ISSUE.print());
+                Bukkit.getServer().getConsoleSender().sendMessage(ConsoleUtils.CONFIGURATION_ISSUE.print());
             }
         }
         config = YamlConfiguration.loadConfiguration(file);
@@ -43,13 +40,13 @@ public abstract class Files {
         try {
             config.save(file);
         } catch (IOException e) {
-            Bukkit.getServer().getConsoleSender().sendMessage(Console.CONFIGURATION_ISSUE.print());
+            Bukkit.getServer().getConsoleSender().sendMessage(ConsoleUtils.CONFIGURATION_ISSUE.print());
         }
     }
 
     public void reload() {
         if (config == null) {
-            this.initialize();
+            this.initialize(pluginName, fileName);
         }
         config = YamlConfiguration.loadConfiguration(file);
     }

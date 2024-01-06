@@ -1,6 +1,6 @@
-package dev.jordgubbe.extras.logistics;
+package dev.jordgubbe.extras.world;
 
-import dev.jordgubbe.extras.utils.Color;
+import dev.jordgubbe.extras.utils.ColorUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -15,9 +15,9 @@ public class Chat implements Listener {
         event.setCancelled(true);
 
         if (player.isOp()) {
-            Bukkit.broadcastMessage(Color.format("&c" + player.getDisplayName() + " &r&6» &r" + event.getMessage()));
+            Bukkit.broadcastMessage(ColorUtils.format("&c" + player.getDisplayName() + " &r&6» &r" + event.getMessage()));
         } else if (player.hasPermission("basics.player")) {
-            Bukkit.broadcastMessage(Color.format("&a" + player.getDisplayName() + " &r&6» &r" + event.getMessage()));
+            Bukkit.broadcastMessage(ColorUtils.format("&a" + player.getDisplayName() + " &r&6» &r" + event.getMessage()));
         }
     }
 
