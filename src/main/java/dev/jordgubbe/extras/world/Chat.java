@@ -16,7 +16,7 @@ public class Chat implements Listener {
 
         if (player.isOp()) {
             Bukkit.broadcastMessage(ColorUtils.format("&c" + player.getDisplayName() + " &r&6» &r" + event.getMessage()));
-        } else if (player.hasPermission("basics.player")) {
+        } else {
             Bukkit.broadcastMessage(ColorUtils.format("&a" + player.getDisplayName() + " &r&6» &r" + event.getMessage()));
         }
     }

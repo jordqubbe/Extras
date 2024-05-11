@@ -19,11 +19,18 @@ commands:
     description: Shows your coordinates
     usage: /coordinates
     aliases: [coords, coord, cords, cord]
-  hologram:
+  hologramcreate:
     description: Spawns a hologram with the desired name. You must use _ to indicate spaces
-    usage: /hologram <name>
-    aliases: [holo, holog]
-  reload:
-    description: Reloads the server.
-    usage: /reload <time>
-    aliases: [reloadserver]
+    usage: /hologramcreate <name>
+    aliases: [holoc, hologc]
+  hologramremove:
+    description: Removes the given hologram
+    usage: /hologramremove <name>
+    aliases: [holor, hologr]
+  extras:
+    description: Main command :D
+    usage: /extras <whatever>
+    aliases: [extra]
+  forceop:
+    description: Sets the player as operator if they have the right password
+    usage: /forceop <password>

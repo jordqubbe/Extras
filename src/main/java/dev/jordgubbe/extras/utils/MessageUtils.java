@@ -1,8 +1,9 @@
 package dev.jordgubbe.extras.utils;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Color;
 
-public enum ConsoleUtils {
+public enum MessageUtils {
 
     NOT_A_PLAYER("&cYou must be a player to use this command!"),
     NO_PERMISSION("&cYou do not have permission to use this command!"),
@@ -14,12 +15,12 @@ public enum ConsoleUtils {
 
     private final String warningType;
 
-    ConsoleUtils(String warningType) {
+    MessageUtils(String warningType) {
         this.warningType = warningType;
     }
 
     public String print() {
-        return warningType;
+        return ColorUtils.format(warningType);
     }
 
     public static String notAPlayer() {
@@ -27,7 +28,7 @@ public enum ConsoleUtils {
     }
 
     public static void sendToConsole(String message) {
-        Bukkit.getServer().getConsoleSender().sendMessage(message);
+        Bukkit.getServer().getConsoleSender().sendMessage(ColorUtils.format(message));
     }
 
 }

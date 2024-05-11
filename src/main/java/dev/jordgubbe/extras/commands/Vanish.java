@@ -2,7 +2,7 @@ package dev.jordgubbe.extras.commands;
 
 import dev.jordgubbe.extras.Main;
 import dev.jordgubbe.extras.utils.ColorUtils;
-import dev.jordgubbe.extras.utils.ConsoleUtils;
+import dev.jordgubbe.extras.utils.MessageUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -24,7 +24,7 @@ public class Vanish implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] strings) {
         if (!(sender instanceof Player player)) {
-            sender.sendMessage(ColorUtils.format(ConsoleUtils.NOT_A_PLAYER.print()));
+            sender.sendMessage(ColorUtils.format(MessageUtils.NOT_A_PLAYER.print()));
             return true;
         } else {
             if (player.isOp()) {
@@ -44,7 +44,7 @@ public class Vanish implements CommandExecutor {
                     }
                 }
             } else {
-                player.sendMessage(ColorUtils.format(ConsoleUtils.NO_PERMISSION.print()));
+                player.sendMessage(ColorUtils.format(MessageUtils.NO_PERMISSION.print()));
             }
         }
         return true;

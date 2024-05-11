@@ -2,8 +2,7 @@ package dev.jordgubbe.extras.commands;
 
 import dev.jordgubbe.extras.library.Modifiers;
 import dev.jordgubbe.extras.utils.ColorUtils;
-import dev.jordgubbe.extras.utils.ConsoleUtils;
-import io.papermc.paper.enchantments.EnchantmentRarity;
+import dev.jordgubbe.extras.utils.MessageUtils;
 import org.bukkit.NamespacedKey;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -21,7 +20,7 @@ public class Enchant implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, String[] args) {
         if (!(sender instanceof Player player)) {
-            sender.sendMessage(ColorUtils.format(ConsoleUtils.NOT_A_PLAYER.print()));
+            sender.sendMessage(ColorUtils.format(MessageUtils.NOT_A_PLAYER.print()));
             return true;
         } else {
             if (player.isOp()) {
@@ -35,9 +34,9 @@ public class Enchant implements CommandExecutor {
                         try {
                             Modifiers.addEnchant(item, enchantment, level);
                             assert enchantment != null;
-                            player.sendMessage(ColorUtils.format("&eAdded [&b" + enchantment.getKey() + " " + level + "&e] to the current held item!" ));
+                            player.sendMessage(ColorUtils.format("&eAdded [&b" + enchantment.getKey().getNamespace() + " " + level + "&e] to the current held item!" ));
                         } catch (IllegalArgumentException | NullPointerException e) {
-                            player.sendMessage(ColorUtils.format(ConsoleUtils.INVALID_COMMAND.print()));
+                            player.sendMessage(ColorUtils.format(MessageUtils.INVALID_COMMAND.print()));
                         }
 
                     } else {
@@ -45,7 +44,7 @@ public class Enchant implements CommandExecutor {
                     }
                 }
             } else {
-                player.sendMessage(ColorUtils.format(ConsoleUtils.NO_PERMISSION.print()));
+                player.sendMessage(ColorUtils.format(MessageUtils.NO_PERMISSION.print()));
             }
         }
         return true;

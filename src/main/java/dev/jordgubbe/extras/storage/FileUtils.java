@@ -1,6 +1,6 @@
-package dev.jordgubbe.extras.files;
+package dev.jordgubbe.extras.storage;
 
-import dev.jordgubbe.extras.utils.ConsoleUtils;
+import dev.jordgubbe.extras.utils.MessageUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -27,7 +27,7 @@ public class FileUtils {
             try {
                 file.createNewFile();
             } catch (IOException e) {
-                Bukkit.getServer().getConsoleSender().sendMessage(ConsoleUtils.CONFIGURATION_ISSUE.print());
+                Bukkit.getServer().getConsoleSender().sendMessage(MessageUtils.CONFIGURATION_ISSUE.print());
             }
         }
         config = YamlConfiguration.loadConfiguration(file);
@@ -44,7 +44,7 @@ public class FileUtils {
         try {
             config.save(file);
         } catch (IOException e) {
-            Bukkit.getServer().getConsoleSender().sendMessage(ConsoleUtils.CONFIGURATION_ISSUE.print());
+            Bukkit.getServer().getConsoleSender().sendMessage(MessageUtils.CONFIGURATION_ISSUE.print());
         }
     }
 
