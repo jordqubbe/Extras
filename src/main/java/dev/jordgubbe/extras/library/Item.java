@@ -32,6 +32,21 @@ public class Item {
     }
 
     /**
+     * @param name - The name of the item
+     * @param mat - The material of the item
+     * @param amount - the amount of items
+     * @return the new item stack
+     */
+    public static ItemStack createItem(String name, Material mat, int amount) {
+        ItemStack item = new ItemStack(mat, amount);
+        ItemMeta meta = item.getItemMeta();
+        assert meta != null;
+        meta.setDisplayName(ColorUtils.format(name));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    /**
      * Creates a Skull ItemStack that can get a texture from minecraft-heads.com
      * @param name Name of the skull item
      * @param lore lore (if any) of said skull item

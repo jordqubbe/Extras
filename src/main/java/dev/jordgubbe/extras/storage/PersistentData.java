@@ -21,6 +21,13 @@ public class PersistentData {
         item.setItemMeta(meta);
     }
 
+    public static void getDataFromItem(ItemStack item, Plugin plugin, String key, PersistentDataType type) {
+        ItemMeta meta = item.getItemMeta();
+        assert meta != null;
+        PersistentDataContainer container = meta.getPersistentDataContainer();
+        container.get(new NamespacedKey(plugin, key), type);
+    }
+
     public static void addDataToEntity(Entity entity, Plugin plugin, String key, PersistentDataType type, String storedData) {
         PersistentDataContainer data = entity.getPersistentDataContainer();
         data.set(new NamespacedKey(plugin, key), type, storedData);

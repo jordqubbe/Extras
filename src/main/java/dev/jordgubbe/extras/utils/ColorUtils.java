@@ -4,6 +4,9 @@ import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -55,6 +58,12 @@ public class ColorUtils {
         return ChatColor.translateAlternateColorCodes('&', hexColored);
     }
 
+    public static List<String> colorizeList(List<String> input) {
+        List<String> ret = new ArrayList<>();
+        for (String line : input) ret.add(ChatColor.translateAlternateColorCodes('&', line));
+        return ret;
+    }
+
     public static TextComponent translateToTextComponent(String text) {
         String colored = translate(text);
         TextComponent base = new TextComponent();
@@ -67,6 +76,10 @@ public class ColorUtils {
 
     public static String format(String string) {
         return ColorUtils.translate(string);
+    }
+
+    public static List<String> formatLines(List<String> text) {
+        return colorizeList(text);
     }
 
     public static String stripColor(String string) {
