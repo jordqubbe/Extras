@@ -2,22 +2,18 @@ package dev.jordgubbe.extras.holograms;
 
 import dev.jordgubbe.extras.utils.ColorUtils;
 import dev.jordgubbe.extras.utils.MessageUtils;
-import org.bukkit.Bukkit;
-import org.bukkit.Color;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
 public class Remove implements CommandExecutor, TabCompleter {
 
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player player)) {
             sender.sendMessage(MessageUtils.notAPlayer());
             return true;
@@ -41,9 +37,8 @@ public class Remove implements CommandExecutor, TabCompleter {
         return true;
     }
 
-    @Nullable
     @Override
-    public List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+    public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
         if (args.length > 0) {
             HologramUtils hologram = new HologramUtils();
             return new ArrayList<>(hologram.get().getKeys(true));
