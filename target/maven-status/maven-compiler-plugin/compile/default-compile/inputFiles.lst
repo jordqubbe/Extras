@@ -2,10 +2,11 @@ C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\ja
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\utils\SkullCreator.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\Main.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\library\Item.java
-C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\holograms\Spawn.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\items\DeleteStick.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\library\Modifiers.java
+C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\library\Inventory.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\commands\Extras.java
+C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\utils\ChatUtils.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\world\Chat.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\world\JoinLeave.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\commands\Coordinates.java
@@ -15,6 +16,9 @@ C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\ja
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\utils\MessageUtils.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\utils\StringUtils.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\commands\Vanish.java
+C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\holograms\Remove.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\commands\Give.java
+C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\holograms\Create.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\utils\ColorUtils.java
+C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\utils\ReflectionUtils.java
 C:\Users\killi\OneDrive\Desktop\Coding\Java\Minecraft Plugins\Extras\src\main\java\dev\jordgubbe\extras\commands\ForceOp.java

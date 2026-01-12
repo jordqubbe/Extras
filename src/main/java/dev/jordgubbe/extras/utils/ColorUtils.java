@@ -13,11 +13,9 @@ import java.util.regex.Pattern;
 public class ColorUtils {
 
     /**
-     *
      * I DO NOT OWN THIS.
      * IT IS TAKEN (AND EDITED) FROM KODY SIMPSONS SIMP-API
      * https://github.com/Cortex-MC/SimpAPI
-     * <p>
      * &0 = Black
      * &1 = Dark Blue
      * &2 = Dark Green

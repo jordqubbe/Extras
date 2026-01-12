@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
-public class FileUtils {
+public abstract class FileUtils {
 
     String pluginName;
     String fileName;
